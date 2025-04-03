@@ -22,7 +22,8 @@
     "dev": "vite",
     "build": "tsc && vite build && npm run build:styles",
     "build:styles": "postcss ./src/index.css -o ./dist/style.css",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "publish": "npm publish"
   },
   "peerDependencies": {
     "react": "^18.2.0",
