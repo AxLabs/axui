@@ -14,7 +14,7 @@ fi
 
 # Update .npmrc file with the GitHub token
 echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > $NPMRC_PATH
-echo "@your-username:registry=https://npm.pkg.github.com" >> $NPMRC_PATH
+echo "@axlabs:registry=https://npm.pkg.github.com" >> $NPMRC_PATH
 
 echo ".npmrc file updated with GitHub token."
 
