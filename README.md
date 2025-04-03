@@ -56,7 +56,7 @@ Please follow our coding guidelines and make sure to run tests before submitting
 We take security seriously. If you find a vulnerability, please follow these steps:
 
 1. **Do not disclose it publicly.**
-2. Contact us at [security@axlabs.com](mailto:security@axlabs.com).
+2. Contact us at [axui@axlabs.com](mailto:axui@axlabs.com).
 3. We will acknowledge receipt within 48 hours and provide a fix timeline.
 
 For more details, refer to our [SECURITY.md](SECURITY.md).
