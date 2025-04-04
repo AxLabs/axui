@@ -63,7 +63,7 @@ For more details, refer to our [SECURITY.md](SECURITY.md).
 
 ## 📜 License
 
-AxUI is licensed under the [MIT License](LICENSE).
+AxUI is licensed under an [AxUI Proprietary License](LICENSE.md).
 
 ## 📮 Stay Connected
 
