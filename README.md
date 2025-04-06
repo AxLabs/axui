@@ -34,7 +34,7 @@ export default function Example() {
 
 ## 📖 Documentation
 
-Check out our full documentation at [axui.axlabs.com/docs](https://axui.axlabs.com/docs).
+Check out our full documentation at [axui.axlabs.net](https://axui.axlabs.net).
 
 ## 🤝 Contributing
 
