@@ -1,9 +1,8 @@
 # AxUI
 
-![GitHub release (latest by tag)](https://img.shields.io/github/v/tag/axlabs/axui?label=version)
-![build status](https://img.shields.io/github/actions/workflow/status/axlabs/axui/ci.yml)
-![license](https://img.shields.io/npm/l/@axlabs/axui)
-![downloads](https://img.shields.io/npm/dm/@axlabs/axui)
+![Version](https://img.shields.io/github/v/release/axlabs/axui?include_prereleases&label=version)
+![Build](https://img.shields.io/github/actions/workflow/status/axlabs/axui/ci.yml)
+![License](https://img.shields.io/github/license/axlabs/axui)
 
 AxUI is a modern, Radix UI-based component library built for Next.js applications. It provides accessible, customizable, and lightweight components optimized for Web3 and enterprise-grade applications.
 
