@@ -71,4 +71,4 @@ AxUI is licensed under an [AxUI Proprietary License](LICENSE.md).
 
 ---
 
-Made with ❤️ by the AxUI team.
+Made with ❤️ by the [AxLabs](https://axlabs.com) team.
