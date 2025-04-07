@@ -25,6 +25,7 @@ yarn add @axlabs/axui
 ## 🛠️ Usage
 
 ```tsx
+import "@axlabs/axui/dist/axui.css";
 import { Button } from "@axlabs/axui";
 
 export default function Example() {
