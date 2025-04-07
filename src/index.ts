@@ -1,4 +1,5 @@
-import "./index.css";
-import "./fonts.css";
+import "@/styles/index.css";
+import "@/styles/fonts.css";
 
-export * from "./components/Button";
+export { Button } from "@/components/Button";
+export type { ButtonProps } from "@/components/Button";

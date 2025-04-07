@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run build:styles",
-    "build:styles": "postcss ./src/index.css -o ./dist/style.css",
+    "build:styles": "postcss ./src/styles/index.css -o ./dist/style.css",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "publish": "npm publish",
     "storybook": "storybook dev -p 6006",
