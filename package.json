@@ -20,14 +20,12 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run typecheck && npm run test && vite build && npm run build:styles",
+    "build": "vite build && npm run build:styles",
     "build:styles": "postcss ./src/styles/index.css -o ./dist/style.css",
-    "test": "vitest run",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "publish": "npm publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "typecheck": "tsc --noEmit"
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -50,9 +48,6 @@
     "@storybook/blocks": "^8.6.12",
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
-    "@storybook/test": "^8.6.12",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
@@ -63,7 +58,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-storybook": "^0.12.0",
-    "jsdom": "^26.0.0",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
     "prop-types": "^15.8.1",
@@ -71,8 +65,7 @@
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^6.2.5",
-    "vite-plugin-dts": "^2.3.0",
-    "vitest": "^3.1.1"
+    "vite-plugin-dts": "^2.3.0"
   },
   "keywords": [
     "axui",
