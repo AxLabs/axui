@@ -1,52 +1,100 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "./Accordion";
+import {
+  AccordionSingleProps,
+  AccordionMultipleProps,
+} from "@radix-ui/react-accordion";
+import { JSX } from "react/jsx-dev-runtime";
 
-const meta: Meta<typeof Accordion> = {
+export default {
   title: "Components/Accordion",
   component: Accordion,
-  tags: ["autodocs"],
-  args: {
-    type: "single",
-    collapsible: true,
+  subcomponents: { AccordionItem, AccordionTrigger, AccordionContent },
+  argTypes: {
+    children: { control: "text" },
+    type: {
+      control: {
+        type: "radio",
+        options: ["single", "multiple"],
+      },
+    },
   },
+} as Meta;
+
+const Template: StoryFn = (args) => (
+  <Accordion type={args.type} {...args}>
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Accordion Item 1</AccordionTrigger>
+      <AccordionContent>
+        This is the content of the first item.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>Accordion Item 2</AccordionTrigger>
+      <AccordionContent>
+        This is the content of the second item.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+      <AccordionTrigger>Accordion Item 3</AccordionTrigger>
+      <AccordionContent>
+        This is the content of the third item.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  type: "single", // Ensure the 'type' prop is set here
 };
 
-export default meta;
+export const Multiple = Template.bind({});
+Multiple.args = {
+  type: "multiple", // Set type to multiple here
+};
 
-type Story = StoryObj<typeof Accordion>;
+export const Controlled = (
+  args: JSX.IntrinsicAttributes &
+    ((AccordionSingleProps | AccordionMultipleProps) &
+      React.RefAttributes<HTMLDivElement>)
+) => {
+  const [openIndex, setOpenIndex] = React.useState<string | undefined>();
 
-export const Default: Story = {
-  render: (args) => (
-    <Accordion {...args} className="w-full max-w-md">
+  const handleItemChange = (index: string | undefined) => {
+    setOpenIndex(index);
+  };
+
+  return (
+    <Accordion value={openIndex} onValueChange={handleItemChange} {...args}>
       <AccordionItem value="item-1">
-        <AccordionTrigger>What is AxUI?</AccordionTrigger>
+        <AccordionTrigger>Accordion Item 1</AccordionTrigger>
         <AccordionContent>
-          AxUI is a headless, accessible, and customizable design system built
-          with Radix UI and Tailwind CSS.
+          This is the content of the first item.
         </AccordionContent>
       </AccordionItem>
-
       <AccordionItem value="item-2">
-        <AccordionTrigger>Is it production-ready?</AccordionTrigger>
+        <AccordionTrigger>Accordion Item 2</AccordionTrigger>
         <AccordionContent>
-          Absolutely. It’s built on top of Radix Primitives and tested with
-          React Testing Library.
+          This is the content of the second item.
         </AccordionContent>
       </AccordionItem>
-
       <AccordionItem value="item-3">
-        <AccordionTrigger>Can I extend components?</AccordionTrigger>
+        <AccordionTrigger>Accordion Item 3</AccordionTrigger>
         <AccordionContent>
-          You bet. Every component is fully typed, headless, and composable. Go
-          nuts.
+          This is the content of the third item.
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  ),
+  );
+};
+
+Controlled.args = {
+  type: "single", // Set the default type for controlled
 };

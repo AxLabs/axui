@@ -1,10 +1,12 @@
 export {
   Select,
   SelectGroup,
-  SelectTrigger,
   SelectValue,
+  SelectTrigger,
   SelectContent,
   SelectLabel,
   SelectItem,
   SelectSeparator,
+  SelectScrollUpButton,
+  SelectScrollDownButton,
 } from "./Select";
