@@ -57,3 +57,14 @@ export { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/Tabs";
 export { Label } from "@/components/Label";
 
 export { RadioGroup, RadioGroupItem } from "@/components/RadioGroup";
+
+export {
+  Select,
+  SelectGroup,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectLabel,
+  SelectItem,
+  SelectSeparator,
+} from "@/components/Select";
