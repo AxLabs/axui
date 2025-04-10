@@ -51,3 +51,9 @@ export {
   ToastClose,
   ToastAction,
 } from "@/components/Toast";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/Tabs";
+
+export { Label } from "@/components/Label";
+
+export { RadioGroup, RadioGroupItem } from "@/components/RadioGroup";
